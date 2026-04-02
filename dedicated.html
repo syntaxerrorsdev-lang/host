@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dedicated Servers — NexaHost</title>
+  <meta name="description" content="Powerful bare-metal dedicated servers. Configure CPU, RAM, and storage. Instant pricing." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: '#6366f1', dark: '#4f46e5', light: '#818cf8' },
+            surface: { DEFAULT: '#0f1117', card: '#161b27', border: '#1e2740' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-surface text-gray-100 font-sans antialiased">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur border-b border-surface-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2 font-bold text-xl tracking-tight">
+        <span class="w-8 h-8 rounded-lg bg-brand flex items-center justify-center text-white text-sm font-black">N</span>
+        NexaHost
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+        <a href="vpn.html" class="hover:text-white transition">VPN</a>
+        <a href="dedicated.html" class="text-white">Servers</a>
+        <a href="about.html" class="hover:text-white transition">About</a>
+        <a href="contacts.html" class="hover:text-white transition">Contacts</a>
+      </nav>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="vpn.html" class="btn-secondary">Get VPN</a>
+        <a href="dedicated.html" class="btn-primary">Get Server</a>
+      </div>
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-surface-card transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-surface-border bg-surface-card px-4 py-4 space-y-3 text-sm font-medium">
+      <a href="vpn.html" class="block py-2 text-gray-400 hover:text-white">VPN</a>
+      <a href="dedicated.html" class="block py-2 text-white">Servers</a>
+      <a href="about.html" class="block py-2 text-gray-400 hover:text-white">About</a>
+      <a href="contacts.html" class="block py-2 text-gray-400 hover:text-white">Contacts</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="pt-28 pb-16 px-4 text-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand/10 via-transparent to-transparent pointer-events-none"></div>
+    <div class="max-w-3xl mx-auto relative">
+      <div class="inline-flex items-center gap-2 bg-brand/10 border border-brand/20 rounded-full px-4 py-1.5 text-sm text-brand-light mb-6">
+        🖥️ Bare-Metal Performance
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-black mb-4">Dedicated Servers</h1>
+      <p class="text-gray-400 text-lg max-w-xl mx-auto">Full root access, no virtualization overhead. Configure your perfect machine and see the price in real time.</p>
+    </div>
+  </section>
+
+  <!-- SERVER CATALOG -->
+  <section class="py-12 px-4">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-2xl font-black mb-2 text-center">Ready-to-order Configurations</h2>
+      <p class="text-gray-400 text-center mb-10 text-sm">Pre-configured setups for common workloads. Or use the configurator below for custom specs.</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- Server 1 -->
+        <div class="pricing-card hover:border-brand/40">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <div class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-1">Entry</div>
+              <div class="font-bold text-lg">E3-1230 v6</div>
+            </div>
+            <span class="bg-surface-border text-gray-400 text-xs font-semibold px-2 py-1 rounded">🇩🇪 DE</span>
+          </div>
+          <div class="space-y-2 text-sm text-gray-400 mb-6">
+            <div class="flex justify-between"><span>CPU</span><span class="text-white">Intel Xeon E3-1230 v6</span></div>
+            <div class="flex justify-between"><span>Cores</span><span class="text-white">4c / 8t @ 3.5 GHz</span></div>
+            <div class="flex justify-between"><span>RAM</span><span class="text-white">16 GB DDR4 ECC</span></div>
+            <div class="flex justify-between"><span>Storage</span><span class="text-white">1× 480 GB SSD</span></div>
+            <div class="flex justify-between"><span>Bandwidth</span><span class="text-white">1 Gbps / 20 TB</span></div>
+          </div>
+          <div class="flex items-end justify-between pt-4 border-t border-surface-border">
+            <div>
+              <div class="text-3xl font-black">$49</div>
+              <div class="text-xs text-gray-500">/month</div>
+            </div>
+            <a href="#configurator" class="btn-secondary text-sm px-4 py-2">Configure</a>
+          </div>
+        </div>
+
+        <!-- Server 2 -->
+        <div class="pricing-card hover:border-brand/40 border-brand/30 relative">
+          <div class="absolute -top-3 left-6 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full">Best Value</div>
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <div class="text-xs font-semibold uppercase tracking-widest text-brand-light mb-1">Standard</div>
+              <div class="font-bold text-lg">E5-2680 v4</div>
+            </div>
+            <span class="bg-surface-border text-gray-400 text-xs font-semibold px-2 py-1 rounded">🇳🇱 NL</span>
+          </div>
+          <div class="space-y-2 text-sm text-gray-400 mb-6">
+            <div class="flex justify-between"><span>CPU</span><span class="text-white">Intel Xeon E5-2680 v4</span></div>
+            <div class="flex justify-between"><span>Cores</span><span class="text-white">14c / 28t @ 2.4 GHz</span></div>
+            <div class="flex justify-between"><span>RAM</span><span class="text-white">32 GB DDR4 ECC</span></div>
+            <div class="flex justify-between"><span>Storage</span><span class="text-white">2× 480 GB SSD</span></div>
+            <div class="flex justify-between"><span>Bandwidth</span><span class="text-white">1 Gbps / Unmetered</span></div>
+          </div>
+          <div class="flex items-end justify-between pt-4 border-t border-surface-border">
+            <div>
+              <div class="text-3xl font-black">$89</div>
+              <div class="text-xs text-gray-500">/month</div>
+            </div>
+            <a href="#configurator" class="btn-primary text-sm px-4 py-2">Configure</a>
+          </div>
+        </div>
+
+        <!-- Server 3 -->
+        <div class="pricing-card hover:border-brand/40">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <div class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-1">Performance</div>
+              <div class="font-bold text-lg">EPYC 7302</div>
+            </div>
+            <span class="bg-surface-border text-gray-400 text-xs font-semibold px-2 py-1 rounded">🇺🇸 US</span>
+          </div>
+          <div class="space-y-2 text-sm text-gray-400 mb-6">
+            <div class="flex justify-between"><span>CPU</span><span class="text-white">AMD EPYC 7302</span></div>
+            <div class="flex justify-between"><span>Cores</span><span class="text-white">16c / 32t @ 3.0 GHz</span></div>
+            <div class="flex justify-between"><span>RAM</span><span class="text-white">64 GB DDR4 ECC</span></div>
+            <div class="flex justify-between"><span>Storage</span><span class="text-white">2× 1 TB NVMe SSD</span></div>
+            <div class="flex justify-between"><span>Bandwidth</span><span class="text-white">10 Gbps / Unmetered</span></div>
+          </div>
+          <div class="flex items-end justify-between pt-4 border-t border-surface-border">
+            <div>
+              <div class="text-3xl font-black">$149</div>
+              <div class="text-xs text-gray-500">/month</div>
+            </div>
+            <a href="#configurator" class="btn-secondary text-sm px-4 py-2">Configure</a>
+          </div>
+        </div>
+
+        <!-- Server 4 -->
+        <div class="pricing-card hover:border-brand/40">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <div class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-1">High Memory</div>
+              <div class="font-bold text-lg">Dual E5-2690 v4</div>
+            </div>
+            <span class="bg-surface-border text-gray-400 text-xs font-semibold px-2 py-1 rounded">🇬🇧 UK</span>
+          </div>
+          <div class="space-y-2 text-sm text-gray-400 mb-6">
+            <div class="flex justify-between"><span>CPU</span><span class="text-white">2× Intel E5-2690 v4</span></div>
+            <div class="flex justify-between"><span>Cores</span><span class="text-white">28c / 56t @ 2.6 GHz</span></div>
+            <div class="flex justify-between"><span>RAM</span><span class="text-white">128 GB DDR4 ECC</span></div>
+            <div class="flex justify-between"><span>Storage</span><span class="text-white">4× 480 GB SSD</span></div>
+            <div class="flex justify-between"><span>Bandwidth</span><span class="text-white">1 Gbps / Unmetered</span></div>
+          </div>
+          <div class="flex items-end justify-between pt-4 border-t border-surface-border">
+            <div>
+              <div class="text-3xl font-black">$229</div>
+              <div class="text-xs text-gray-500">/month</div>
+            </div>
+            <a href="#configurator" class="btn-secondary text-sm px-4 py-2">Configure</a>
+          </div>
+        </div>
+
+        <!-- Server 5 -->
+        <div class="pricing-card hover:border-brand/40">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <div class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-1">Storage</div>
+              <div class="font-bold text-lg">E5-2620 + HDD</div>
+            </div>
+            <span class="bg-surface-border text-gray-400 text-xs font-semibold px-2 py-1 rounded">🇩🇪 DE</span>
+          </div>
+          <div class="space-y-2 text-sm text-gray-400 mb-6">
+            <div class="flex justify-between"><span>CPU</span><span class="text-white">Intel Xeon E5-2620</span></div>
+            <div class="flex justify-between"><span>Cores</span><span class="text-white">6c / 12t @ 2.0 GHz</span></div>
+            <div class="flex justify-between"><span>RAM</span><span class="text-white">32 GB DDR4 ECC</span></div>
+            <div class="flex justify-between"><span>Storage</span><span class="text-white">4× 4 TB HDD SATA</span></div>
+            <div class="flex justify-between"><span>Bandwidth</span><span class="text-white">1 Gbps / 20 TB</span></div>
+          </div>
+          <div class="flex items-end justify-between pt-4 border-t border-surface-border">
+            <div>
+              <div class="text-3xl font-black">$99</div>
+              <div class="text-xs text-gray-500">/month</div>
+            </div>
+            <a href="#configurator" class="btn-secondary text-sm px-4 py-2">Configure</a>
+          </div>
+        </div>
+
+        <!-- Server 6 -->
+        <div class="pricing-card hover:border-brand/40">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <div class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-1">Ultimate</div>
+              <div class="font-bold text-lg">EPYC 7543</div>
+            </div>
+            <span class="bg-surface-border text-gray-400 text-xs font-semibold px-2 py-1 rounded">🇳🇱 NL</span>
+          </div>
+          <div class="space-y-2 text-sm text-gray-400 mb-6">
+            <div class="flex justify-between"><span>CPU</span><span class="text-white">AMD EPYC 7543</span></div>
+            <div class="flex justify-between"><span>Cores</span><span class="text-white">32c / 64t @ 3.7 GHz</span></div>
+            <div class="flex justify-between"><span>RAM</span><span class="text-white">256 GB DDR4 ECC</span></div>
+            <div class="flex justify-between"><span>Storage</span><span class="text-white">4× 2 TB NVMe SSD</span></div>
+            <div class="flex justify-between"><span>Bandwidth</span><span class="text-white">10 Gbps / Unmetered</span></div>
+          </div>
+          <div class="flex items-end justify-between pt-4 border-t border-surface-border">
+            <div>
+              <div class="text-3xl font-black">$399</div>
+              <div class="text-xs text-gray-500">/month</div>
+            </div>
+            <a href="#configurator" class="btn-secondary text-sm px-4 py-2">Configure</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFIGURATOR -->
+  <section id="configurator" class="py-20 px-4 bg-surface-card/30">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-black mb-3">Server Configurator</h2>
+        <p class="text-gray-400">Build your custom setup. Price updates instantly.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-8">
+
+        <!-- Options -->
+        <div class="lg:col-span-3 space-y-6">
+
+          <!-- CPU -->
+          <div class="config-block">
+            <div class="config-block-header">
+              <span>🖥️</span>
+              <h3 class="font-bold">Processor</h3>
+            </div>
+            <div class="grid gap-2">
+              <label class="radio-option">
+                <input type="radio" name="cpu" value="49" checked class="sr-only" data-label="Intel Xeon E3-1230 v6 (4c/8t)" />
+                <div class="radio-box flex justify-between items-center">
+                  <div>
+                    <div class="font-semibold text-sm">Intel Xeon E3-1230 v6</div>
+                    <div class="text-xs text-gray-500">4 cores / 8 threads · 3.5 GHz</div>
+                  </div>
+                  <div class="text-sm font-bold text-brand-light">$49</div>
+                </div>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="cpu" value="79" class="sr-only" data-label="Intel Xeon E5-2680 v4 (14c/28t)" />
+                <div class="radio-box flex justify-between items-center">
+                  <div>
+                    <div class="font-semibold text-sm">Intel Xeon E5-2680 v4</div>
+                    <div class="text-xs text-gray-500">14 cores / 28 threads · 2.4 GHz</div>
+                  </div>
+                  <div class="text-sm font-bold text-brand-light">$79</div>
+                </div>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="cpu" value="119" class="sr-only" data-label="AMD EPYC 7302 (16c/32t)" />
+                <div class="radio-box flex justify-between items-center">
+                  <div>
+                    <div class="font-semibold text-sm">AMD EPYC 7302</div>
+                    <div class="text-xs text-gray-500">16 cores / 32 threads · 3.0 GHz</div>
+                  </div>
+                  <div class="text-sm font-bold text-brand-light">$119</div>
+                </div>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="cpu" value="299" class="sr-only" data-label="AMD EPYC 7543 (32c/64t)" />
+                <div class="radio-box flex justify-between items-center">
+                  <div>
+                    <div class="font-semibold text-sm">AMD EPYC 7543</div>
+                    <div class="text-xs text-gray-500">32 cores / 64 threads · 3.7 GHz</div>
+                  </div>
+                  <div class="text-sm font-bold text-brand-light">$299</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- RAM -->
+          <div class="config-block">
+            <div class="config-block-header">
+              <span>🧠</span>
+              <h3 class="font-bold">Memory (RAM)</h3>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <label class="radio-option">
+                <input type="radio" name="ram" value="0" checked class="sr-only" data-label="16 GB DDR4 ECC" />
+                <div class="radio-box text-center">
+                  <div class="font-semibold text-sm">16 GB</div>
+                  <div class="text-xs text-gray-500">Included</div>
+                </div>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="ram" value="20" class="sr-only" data-label="32 GB DDR4 ECC" />
+                <div class="radio-box text-center">
+                  <div class="font-semibold text-sm">32 GB</div>
+                  <div class="text-xs text-brand-light">+$20</div>
+                </div>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="ram" value="50" class="sr-only" data-label="64 GB DDR4 ECC" />
+                <div class="radio-box text-center">
+                  <div class="font-semibold text-sm">64 GB</div>
+                  <div class="text-xs text-brand-light">+$50</div>
+                </div>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="ram" value="110" class="sr-only" data-label="128 GB DDR4 ECC" />
+                <div class="radio-box text-center">
+                  <div class="font-semibold text-sm">128 GB</div>
+                  <div class="text-xs text-brand-light">+$110</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Storage -->
+          <div class="config-block">
+            <div class="config-block-header">
+              <span>💾</span>
+              <h3 class="font-bold">Storage</h3>
+            </div>
+            <div class="grid gap-2">
+              <label class="radio-option">
+                <input type="radio" name="disk" value="0" checked class="sr-only" data-label="1× 480 GB SSD SATA" />
+                <div class="radio-box flex justify-between items-center">
+                  <div>
+                    <div class="font-semibold text-sm">1× 480 GB SSD SATA</div>
+                    <div class="text-xs text-gray-500">Good for basic workloads</div>
+                  </div>
+                  <div class="text-xs text-gray-500">Included</div>
+                </div>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="disk" value="15" class="sr-only" data-label="2× 480 GB SSD SATA (RAID 1)" />
+                <div class="radio-box flex justify-between items-center">
+                  <div>
+                    <div class="font-semibold text-sm">2× 480 GB SSD SATA</div>
+                    <div class="text-xs text-gray-500">RAID 1 available</div>
+                  </div>
+                  <div class="text-xs text-brand-light">+$15</div>
+                </div>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="disk" value="30" class="sr-only" data-label="1× 1 TB NVMe SSD" />
+                <div class="radio-box flex justify-between items-center">
+                  <div>
+                    <div class="font-semibold text-sm">1× 1 TB NVMe SSD</div>
+                    <div class="text-xs text-gray-500">High-speed storage</div>
+                  </div>
+                  <div class="text-xs text-brand-light">+$30</div>
+                </div>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="disk" value="55" class="sr-only" data-label="2× 1 TB NVMe SSD" />
+                <div class="radio-box flex justify-between items-center">
+                  <div>
+                    <div class="font-semibold text-sm">2× 1 TB NVMe SSD</div>
+                    <div class="text-xs text-gray-500">RAID 1 / JBOD</div>
+                  </div>
+                  <div class="text-xs text-brand-light">+$55</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div class="config-block">
+            <div class="config-block-header">
+              <span>🌍</span>
+              <h3 class="font-bold">Data Center Location</h3>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <label class="radio-option">
+                <input type="radio" name="location" value="0" checked class="sr-only" />
+                <div class="radio-box text-center">
+                  <div class="text-lg mb-1">🇩🇪</div>
+                  <div class="font-semibold text-sm">Germany</div>
+                  <div class="text-xs text-gray-500">Frankfurt</div>
+                </div>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="location" value="0" class="sr-only" />
+                <div class="radio-box text-center">
+                  <div class="text-lg mb-1">🇳🇱</div>
+                  <div class="font-semibold text-sm">Netherlands</div>
+                  <div class="text-xs text-gray-500">Amsterdam</div>
+                </div>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="location" value="10" class="sr-only" />
+                <div class="radio-box text-center">
+                  <div class="text-lg mb-1">🇺🇸</div>
+                  <div class="font-semibold text-sm">USA</div>
+                  <div class="text-xs text-brand-light">+$10</div>
+                </div>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="location" value="15" class="sr-only" />
+                <div class="radio-box text-center">
+                  <div class="text-lg mb-1">🇸🇬</div>
+                  <div class="font-semibold text-sm">Singapore</div>
+                  <div class="text-xs text-brand-light">+$15</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Bandwidth -->
+          <div class="config-block">
+            <div class="config-block-header">
+              <span>📡</span>
+              <h3 class="font-bold">Bandwidth</h3>
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+              <label class="radio-option">
+                <input type="radio" name="bw" value="0" checked class="sr-only" />
+                <div class="radio-box text-center">
+                  <div class="font-semibold text-sm">20 TB</div>
+                  <div class="text-xs text-gray-500">1 Gbps port</div>
+                </div>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="bw" value="10" class="sr-only" />
+                <div class="radio-box text-center">
+                  <div class="font-semibold text-sm">Unmetered</div>
+                  <div class="text-xs text-brand-light">+$10</div>
+                </div>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="bw" value="40" class="sr-only" />
+                <div class="radio-box text-center">
+                  <div class="font-semibold text-sm">10 Gbps</div>
+                  <div class="text-xs text-brand-light">+$40</div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary sidebar -->
+        <div class="lg:col-span-2">
+          <div class="sticky top-20">
+            <div class="bg-surface-card border border-surface-border rounded-2xl p-6">
+              <h3 class="font-bold text-lg mb-6">Your Configuration</h3>
+
+              <div id="configSummary" class="space-y-3 text-sm mb-6">
+                <div class="flex justify-between text-gray-400">
+                  <span>Processor</span>
+                  <span id="sumCPU" class="text-white text-right max-w-[160px]">Intel E3-1230 v6</span>
+                </div>
+                <div class="flex justify-between text-gray-400">
+                  <span>RAM</span>
+                  <span id="sumRAM" class="text-white">16 GB DDR4</span>
+                </div>
+                <div class="flex justify-between text-gray-400">
+                  <span>Storage</span>
+                  <span id="sumDisk" class="text-white text-right max-w-[160px]">1× 480 GB SSD</span>
+                </div>
+                <div class="flex justify-between text-gray-400">
+                  <span>Bandwidth</span>
+                  <span id="sumBW" class="text-white">20 TB / 1 Gbps</span>
+                </div>
+              </div>
+
+              <div class="border-t border-surface-border pt-6 mb-6">
+                <div class="flex items-end justify-between mb-1">
+                  <span class="text-gray-400 text-sm">Monthly total</span>
+                  <div class="text-4xl font-black text-white">$<span id="dedicatedPrice">49</span></div>
+                </div>
+                <div class="text-xs text-gray-500">Billed monthly. Annual discount available.</div>
+              </div>
+
+              <!-- Addon: DDoS -->
+              <div class="mb-6">
+                <label class="flex items-start gap-3 cursor-pointer">
+                  <input type="checkbox" id="addonDdos" value="15" class="mt-0.5 accent-brand" />
+                  <div>
+                    <div class="text-sm font-semibold">Advanced DDoS Protection <span class="text-brand-light text-xs">+$15</span></div>
+                    <div class="text-xs text-gray-500">Up to 1 Tbps mitigation</div>
+                  </div>
+                </label>
+              </div>
+
+              <a href="contacts.html" class="btn-primary w-full block text-center py-3.5 text-base font-bold">
+                Order This Server
+              </a>
+              <p class="text-xs text-gray-600 text-center mt-3">Setup time: 1–4 hours · No contract</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="py-20 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-black text-center mb-10">Every server includes</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="flex items-start gap-3 p-4 bg-surface-card border border-surface-border rounded-xl">
+          <span class="text-brand text-lg mt-0.5">✓</span>
+          <div>
+            <div class="font-semibold text-sm mb-1">Full Root Access</div>
+            <div class="text-xs text-gray-500">Complete control over your server, your OS.</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 p-4 bg-surface-card border border-surface-border rounded-xl">
+          <span class="text-brand text-lg mt-0.5">✓</span>
+          <div>
+            <div class="font-semibold text-sm mb-1">IPMI / KVM Access</div>
+            <div class="text-xs text-gray-500">Out-of-band management panel included.</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 p-4 bg-surface-card border border-surface-border rounded-xl">
+          <span class="text-brand text-lg mt-0.5">✓</span>
+          <div>
+            <div class="font-semibold text-sm mb-1">Free OS Reinstall</div>
+            <div class="text-xs text-gray-500">Ubuntu, Debian, CentOS, Windows Server.</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 p-4 bg-surface-card border border-surface-border rounded-xl">
+          <span class="text-brand text-lg mt-0.5">✓</span>
+          <div>
+            <div class="font-semibold text-sm mb-1">Basic DDoS Protection</div>
+            <div class="text-xs text-gray-500">Up to 10 Gbps mitigation on all servers.</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 p-4 bg-surface-card border border-surface-border rounded-xl">
+          <span class="text-brand text-lg mt-0.5">✓</span>
+          <div>
+            <div class="font-semibold text-sm mb-1">Reverse DNS</div>
+            <div class="text-xs text-gray-500">Set custom PTR records at no extra cost.</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 p-4 bg-surface-card border border-surface-border rounded-xl">
+          <span class="text-brand text-lg mt-0.5">✓</span>
+          <div>
+            <div class="font-semibold text-sm mb-1">99.9% SLA</div>
+            <div class="text-xs text-gray-500">Network and power uptime guaranteed.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-surface-border bg-surface-card/50 py-12 px-4">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+      <div class="col-span-2 md:col-span-1">
+        <a href="index.html" class="flex items-center gap-2 font-bold text-lg mb-4">
+          <span class="w-7 h-7 rounded-lg bg-brand flex items-center justify-center text-white text-xs font-black">N</span>
+          NexaHost
+        </a>
+        <p class="text-sm text-gray-500 leading-relaxed">Reliable infrastructure for people who can't afford downtime.</p>
+      </div>
+      <div>
+        <div class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Products</div>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="vpn.html" class="hover:text-white transition">VPN</a></li>
+          <li><a href="dedicated.html" class="hover:text-white transition">Dedicated Servers</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Company</div>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="about.html" class="hover:text-white transition">About</a></li>
+          <li><a href="contacts.html" class="hover:text-white transition">Contacts</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Contact</div>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li>support@nexahost.io</li>
+          <li><a href="https://t.me/nexahost" class="hover:text-white transition">Telegram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-surface-border pt-8 text-center text-sm text-gray-600">
+      &copy; 2026 NexaHost. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/dedicated.js"></script>
+</body>
+</html>

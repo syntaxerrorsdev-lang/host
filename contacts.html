@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacts — NexaHost</title>
+  <meta name="description" content="Contact NexaHost support. Email, Telegram, live chat — 24/7."/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brand:'#4f7cff','brand-dark':'#3563e9','brand-light':'#7ba3ff',surface:{DEFAULT:'#060a13',2:'#0b1221',card:'#0e1829',card2:'#111d33',border:'#1a2845',border2:'#223058'}}}}}</script>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body style="background:#060a13" class="text-slate-200 font-sans antialiased">
+
+  <header class="fixed top-0 inset-x-0 z-50" style="background:rgba(6,10,19,.85);backdrop-filter:blur(20px);border-bottom:1px solid #1a2845">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[68px]">
+      <a href="index.html" class="flex items-center gap-3 text-white font-black text-xl tracking-tight">
+        <div style="width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,#4f7cff,#7c3aed);box-shadow:0 0 20px rgba(79,124,255,.5)" class="flex items-center justify-center text-white font-black text-sm">N</div>
+        NexaHost
+      </a>
+      <nav class="hidden lg:flex items-center gap-1">
+        <a href="vpn.html"       class="px-4 py-2 text-sm font-medium text-slate-400 hover:text-white rounded-lg hover:bg-white/5 transition">VPN</a>
+        <a href="dedicated.html" class="px-4 py-2 text-sm font-medium text-slate-400 hover:text-white rounded-lg hover:bg-white/5 transition">Dedicated Servers</a>
+        <a href="about.html"     class="px-4 py-2 text-sm font-medium text-slate-400 hover:text-white rounded-lg hover:bg-white/5 transition">About</a>
+        <a href="contacts.html"  class="px-4 py-2 text-sm font-medium text-white rounded-lg bg-white/5">Contacts</a>
+      </nav>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="vpn.html" class="btn-secondary text-sm">Buy VPN</a>
+        <a href="dedicated.html" class="btn-primary text-sm">Configure Server</a>
+      </div>
+      <button class="lg:hidden p-2 rounded-lg text-slate-400" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" style="border-top:1px solid #1a2845;background:#0b1221">
+      <div class="max-w-7xl mx-auto px-4 py-4 space-y-1">
+        <a href="vpn.html"       class="block px-4 py-2.5 text-sm text-slate-400 hover:text-white rounded-lg hover:bg-white/5">VPN</a>
+        <a href="dedicated.html" class="block px-4 py-2.5 text-sm text-slate-400 hover:text-white rounded-lg hover:bg-white/5">Dedicated Servers</a>
+        <a href="about.html"     class="block px-4 py-2.5 text-sm text-slate-400 hover:text-white rounded-lg hover:bg-white/5">About</a>
+        <a href="contacts.html"  class="block px-4 py-2.5 text-sm text-white rounded-lg bg-white/5">Contacts</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-16 px-4 text-center relative overflow-hidden">
+    <div style="position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(circle,rgba(79,124,255,.1) 0%,transparent 70%);pointer-events:none"></div>
+    <div class="max-w-2xl mx-auto relative">
+      <div class="section-label mx-auto w-fit mb-6">Contact Us</div>
+      <h1 class="text-4xl sm:text-5xl font-black text-white mb-4">We're here to help</h1>
+      <p class="text-slate-400 text-lg">Real support from real engineers. Average response time under 5 minutes, 24/7.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT CHANNELS -->
+  <section class="py-12 px-4">
+    <div class="max-w-5xl mx-auto grid sm:grid-cols-3 gap-5 mb-16">
+      <a href="mailto:support@nexahost.io" class="feature-card text-center group">
+        <div class="text-3xl mb-4">📧</div>
+        <h3 class="font-bold text-white mb-2">Email</h3>
+        <p class="text-sm text-slate-400 mb-3">support@nexahost.io</p>
+        <div class="text-xs text-slate-500">Response within 1 hour</div>
+      </a>
+      <a href="https://t.me/nexahost" class="feature-card text-center group">
+        <div class="text-3xl mb-4">✈️</div>
+        <h3 class="font-bold text-white mb-2">Telegram</h3>
+        <p class="text-sm text-slate-400 mb-3">@nexahost</p>
+        <div class="text-xs" style="color:#00e5a0">Average 5 min response</div>
+      </a>
+      <div class="feature-card text-center">
+        <div class="text-3xl mb-4">💬</div>
+        <h3 class="font-bold text-white mb-2">Live Chat</h3>
+        <p class="text-sm text-slate-400 mb-3">Available on the website</p>
+        <div class="flex items-center justify-center gap-2">
+          <div style="width:7px;height:7px;border-radius:50%;background:#00e5a0;box-shadow:0 0 8px #00e5a0"></div>
+          <span class="text-xs" style="color:#00e5a0">Online now</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="max-w-2xl mx-auto">
+      <div style="background:#0e1829;border:1px solid #1a2845;border-radius:1.25rem;padding:2.5rem">
+        <h2 class="text-2xl font-black text-white mb-2">Send a Message</h2>
+        <p class="text-sm text-slate-400 mb-8">Tell us what you need — we'll get back to you fast.</p>
+
+        <form class="space-y-5" onsubmit="handleForm(event)">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold text-slate-300 mb-2">Name</label>
+              <input type="text" placeholder="John Doe" class="w-full select-field" required/>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-slate-300 mb-2">Email</label>
+              <input type="email" placeholder="you@example.com" class="w-full select-field" required/>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold text-slate-300 mb-2">Subject</label>
+            <select class="select-field">
+              <option>General inquiry</option>
+              <option>Dedicated server order</option>
+              <option>VPN subscription</option>
+              <option>Technical support</option>
+              <option>Billing</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold text-slate-300 mb-2">Message</label>
+            <textarea rows="5" placeholder="Describe your question or requirement..." class="w-full select-field resize-none" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary w-full py-3.5 text-base font-bold">Send Message →</button>
+        </form>
+
+        <div id="formSuccess" class="hidden mt-6 p-4 rounded-xl text-center text-sm font-semibold" style="background:rgba(0,229,160,.1);border:1px solid rgba(0,229,160,.2);color:#00e5a0">
+          ✓ Message sent! We'll get back to you within 1 hour.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#060a13;border-top:1px solid #1a2845" class="py-10 px-4 mt-12">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-2 font-black text-lg text-white">
+        <div style="width:32px;height:32px;border-radius:7px;background:linear-gradient(135deg,#4f7cff,#7c3aed)" class="flex items-center justify-center text-white font-black text-xs">N</div>
+        NexaHost
+      </a>
+      <div class="flex items-center gap-6 text-sm text-slate-500">
+        <a href="vpn.html" class="hover:text-white transition">VPN</a>
+        <a href="dedicated.html" class="hover:text-white transition">Servers</a>
+        <a href="about.html" class="hover:text-white transition">About</a>
+      </div>
+      <div class="text-xs text-slate-600">&copy; 2026 NexaHost. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function handleForm(e) {
+      e.preventDefault();
+      document.getElementById('formSuccess').classList.remove('hidden');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
