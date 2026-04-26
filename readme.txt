@@ -1,2 +1,2 @@
 ok
-![Screenshot](img/hlvTn.jpg)
+<img src="img/hlvTn.jpg" width="600">
